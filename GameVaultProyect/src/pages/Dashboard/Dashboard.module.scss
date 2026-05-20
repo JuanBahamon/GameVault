@@ -1,0 +1,184 @@
+.pagina {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.contenido {
+  padding: 2rem 2.5rem;
+}
+
+.encabezado {
+  margin-bottom: 2rem;
+
+  h2 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+  }
+
+  p {
+    color: var(--text2);
+    font-size: 0.9rem;
+  }
+}
+
+// ── ESTADÍSTICAS ──────────────────────────────────
+.estadisticas {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+.tarjetaStat {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1.25rem;
+}
+
+.numeroStat {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.etiquetaStat {
+  font-size: 0.78rem;
+  color: var(--text3);
+}
+
+// ── BIBLIOTECA ────────────────────────────────────
+.seccionBiblioteca {
+  margin-bottom: 2.5rem;
+
+  h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+
+    span { color: var(--accent); }
+  }
+}
+
+.cuadriculaBiblioteca {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 0.875rem;
+}
+
+.tarjetaBiblioteca {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1rem;
+  text-align: center;
+  cursor: pointer;
+  transition: border-color 0.2s;
+
+  &:hover { border-color: var(--accent); }
+}
+
+.emojiBiblioteca {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.nombreBiblioteca {
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.precioBiblioteca {
+  font-size: 0.75rem;
+  color: var(--accent2);
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+}
+
+.cargando,
+.vacio {
+  color: var(--text3);
+  font-size: 0.9rem;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btnAccent {
+  background: var(--accent);
+  color: white;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s;
+
+  &:hover { background: #c42020; }
+}
+
+// ── ÓRDENES ───────────────────────────────────────
+.seccionOrdenes {
+  h3 {
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+
+    span { color: var(--accent); }
+  }
+}
+
+.tablaOrdenes {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.encabezadoTabla {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  padding: 0.875rem 1.25rem;
+  background: var(--bg3);
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text2);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.filaOrden {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  padding: 0.875rem 1.25rem;
+  border-top: 1px solid var(--border);
+  font-size: 0.85rem;
+  color: var(--text2);
+  align-items: center;
+}
+
+.idOrden {
+  color: var(--text3);
+  font-size: 0.8rem;
+}
+
+.totalOrden {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 700;
+  color: var(--accent2);
+}
+
+.estadoCompletado {
+  color: var(--green);
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
