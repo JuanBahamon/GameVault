@@ -1,5 +1,3 @@
-// Catalogo.jsx
-
 export default function Catalogo() {
   return (
     <div>

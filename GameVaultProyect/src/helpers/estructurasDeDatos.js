@@ -233,7 +233,7 @@ export class MontiuloMaximo {
 // ================================================
 // ESTRUCTURA 5: GRAFO
 // Uso: Sistema de recomendaciones entre juegos
-// ================================================
+
 export class Grafo {
   constructor() {
     this.listaAdyacencia = {};
