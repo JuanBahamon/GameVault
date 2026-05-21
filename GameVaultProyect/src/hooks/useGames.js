@@ -16,7 +16,6 @@ const useJuegos = () => {
         const instantanea = await getDocs(q);
         const datos = instantanea.docs.map((doc) => ({ id: doc.id, ...doc.data() }));
 
-        // Insertar en ArbolBST por precio
         const bst = new ArbolBST();
         datos.forEach((juego) => bst.insertar({ ...juego, precio: juego.price || 0 }));
         setArbol(bst);

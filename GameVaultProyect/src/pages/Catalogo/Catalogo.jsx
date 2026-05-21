@@ -51,10 +51,8 @@ const Catalogo = () => {
         <span className={styles.contador}>{filtrados.length} juegos</span>
       </div>
 
-      {/* FILTROS */}
       <div className={styles.filtros}>
 
-        {/* Géneros */}
         <div className={styles.generos}>
           {GENEROS.map((genero) => (
             <button
@@ -67,7 +65,6 @@ const Catalogo = () => {
           ))}
         </div>
 
-        {/* Ordenar + Precio */}
         <div className={styles.controles}>
           <select
             className={styles.selector}
@@ -106,7 +103,6 @@ const Catalogo = () => {
         </div>
       </div>
 
-      {/* CUADRÍCULA */}
       <div className={styles.contenido}>
         {cargando ? (
           <div className={styles.cargando}>Cargando juegos...</div>

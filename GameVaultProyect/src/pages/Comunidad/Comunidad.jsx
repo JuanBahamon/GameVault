@@ -1,2 +1,5 @@
-const Comunidad = () => <div>Community</div>
+const Comunidad = () => 
+    <div>
+    Community
+    </div>
 export default Comunidad
