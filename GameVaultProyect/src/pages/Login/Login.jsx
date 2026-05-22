@@ -1,11 +1,12 @@
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useAuth } from "../../context/AuthContext";
 import styles from "./Login.module.scss";
 
 const Login = () => {
   const { iniciarSesion } = useAuth();
   const navegar = useNavigate();
+  const ubicacion = useLocation();
 
   const [formulario, setFormulario] = useState({ correo: "", contrasena: "" });
   const [error, setError] = useState("");
@@ -21,7 +22,12 @@ const Login = () => {
     setCargando(true);
     try {
       await iniciarSesion(formulario.correo, formulario.contrasena);
-      navegar("/dashboard");
+      navegar(ubicacion.state?.returnTo || "/dashboard", {
+        replace: true,
+        state: ubicacion.state?.checkoutAfterLogin
+          ? { checkoutAfterLogin: true }
+          : {},
+      });
     } catch {
       setError("Correo o contraseña incorrectos");
     } finally {

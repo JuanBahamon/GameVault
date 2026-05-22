@@ -74,7 +74,9 @@ const Dashboard = () => {
             <div className={styles.numeroStat} style={{ color: "var(--green)" }}>
               {totalResenas}
             </div>
-            <div className={styles.etiquetaStat}>Reseñas escritas</div>
+            <div className={styles.etiquetaStat}>
+              Reseñas escritas
+            </div>
           </div>
           <div className={styles.tarjetaStat}>
             <div className={styles.numeroStat} style={{ color: "var(--accent2)" }}>

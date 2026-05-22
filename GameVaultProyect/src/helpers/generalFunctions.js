@@ -1,6 +1,6 @@
-export const formatoPrecio = (precio) => {
-  if (precio === undefined || precio === null) return "GRATIS";
-  if (precio === 0) return "GRATIS";
+export const formatoPrecio = (precio, mostrarGratis = true) => {
+  if (precio === undefined || precio === null) return mostrarGratis ? "GRATIS" : "$0.00";
+  if (precio === 0) return mostrarGratis ? "GRATIS" : `${Number(0).toFixed(2)}$`;
   return `${Number(precio).toFixed(2)}$`;
 };
 

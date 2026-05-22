@@ -208,7 +208,7 @@ const Admin = () => {
           <div>
             <span className={styles.preTitulo}>Panel privado</span>
             <h1>Administracion de GameVault</h1>
-            <p>Gestiona el catalogo de juegos conectado a Firebase.</p>
+            <p>Gestiona el catalogo de juegos.</p>
           </div>
           <button className={styles.btnSecundario} onClick={limpiarFormulario}>
             Nuevo juego
