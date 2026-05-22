@@ -22,7 +22,7 @@ const Login = () => {
     try {
       await iniciarSesion(formulario.correo, formulario.contrasena);
       navegar("/dashboard");
-    } catch (err) {
+    } catch {
       setError("Correo o contraseña incorrectos");
     } finally {
       setCargando(false);
