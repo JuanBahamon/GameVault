@@ -103,7 +103,7 @@ const Dashboard = () => {
             <div className={styles.cuadriculaBiblioteca}>
               {historial.map((juego, indice) => (
                 <div key={indice} className={styles.tarjetaBiblioteca}>
-                  <div className={styles.emojiBiblioteca}>🎮</div>
+                  <div className={styles.emojiBiblioteca}>{juego.emoji}</div>
                   <div className={styles.nombreBiblioteca}>{juego.nombre}</div>
                   <div className={styles.precioBiblioteca}>
                     ${juego.precio?.toFixed(2)}

@@ -1,0 +1,269 @@
+.pagina {
+  min-height: 100vh;
+  background: var(--bg);
+}
+
+.contenido {
+  padding: 2rem 2.5rem 3rem;
+}
+
+.detalle {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.65fr);
+  gap: 1.25rem;
+  align-items: start;
+}
+
+.columnaInfo,
+.columnaCompra,
+.resenas {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.columnaInfo {
+  padding: 1.25rem;
+
+  h1 {
+    color: var(--text);
+    font-size: 2.35rem;
+    line-height: 1.05;
+    margin: 1rem 0 0.55rem;
+  }
+}
+
+.iconoGrande {
+  align-items: center;
+  aspect-ratio: 1 / 1;
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  font-size: clamp(5rem, 16vw, 10rem);
+  justify-content: center;
+  width: min(100%, 460px);
+}
+
+.calificacion {
+  align-items: center;
+  color: var(--accent2);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.2rem;
+  font-size: 1rem;
+  margin-bottom: 0.75rem;
+
+  strong {
+    color: var(--text);
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 1.1rem;
+    margin-left: 0.35rem;
+  }
+}
+
+.metaJuego {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-bottom: 1rem;
+
+  span {
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    color: var(--text2);
+    font-size: 0.78rem;
+    padding: 0.35rem 0.65rem;
+  }
+}
+
+.descripcion {
+  color: var(--text2);
+  font-size: 0.92rem;
+  line-height: 1.7;
+  max-width: 720px;
+}
+
+.etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin-top: 1rem;
+
+  span {
+    border: 1px solid rgba(255, 140, 0, 0.35);
+    border-radius: 6px;
+    color: var(--accent2);
+    font-size: 0.78rem;
+    padding: 0.4rem 0.6rem;
+  }
+}
+
+.columnaCompra {
+  padding: 1.2rem;
+  position: sticky;
+  top: 1rem;
+
+  hr {
+    border: 0;
+    border-top: 1px solid var(--border);
+    margin: 1.2rem 0;
+  }
+
+  h2 {
+    color: var(--text);
+    font-size: 1.25rem;
+    margin-bottom: 0.85rem;
+  }
+}
+
+.precio {
+  color: var(--accent2);
+  display: block;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 2.8rem;
+  line-height: 1;
+  margin-bottom: 1rem;
+}
+
+.btnCarrito,
+.btnVolver {
+  align-items: center;
+  background: var(--accent);
+  border: 0;
+  border-radius: 6px;
+  color: white;
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 2.8rem;
+  padding: 0 1rem;
+  transition: background 0.2s, opacity 0.2s;
+}
+
+.btnCarrito {
+  width: 100%;
+
+  &:hover:not(:disabled) {
+    background: #c42020;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.62;
+  }
+}
+
+.btnVolver {
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
+.requisitos {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+
+  div {
+    display: grid;
+    grid-template-columns: minmax(120px, 0.7fr) minmax(0, 1fr);
+    gap: 0.75rem;
+    padding: 0.8rem;
+
+    & + div {
+      border-top: 1px solid var(--border);
+    }
+  }
+
+  span {
+    color: var(--text3);
+    font-size: 0.78rem;
+  }
+
+  strong {
+    color: var(--text2);
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-align: right;
+  }
+}
+
+.resenas {
+  margin-top: 1.25rem;
+  padding: 1.15rem;
+}
+
+.tituloSeccion {
+  align-items: center;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.85rem;
+
+  h2 {
+    color: var(--text);
+    font-size: 1.4rem;
+  }
+
+  span {
+    color: var(--text3);
+    font-size: 0.8rem;
+  }
+}
+
+.listaResenas {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.estadoPagina {
+  color: var(--text2);
+  padding: 3rem 2.5rem;
+
+  h1 {
+    color: var(--text);
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .detalle,
+  .listaResenas {
+    grid-template-columns: 1fr;
+  }
+
+  .columnaCompra {
+    position: static;
+  }
+}
+
+@media (max-width: 620px) {
+  .contenido {
+    padding: 1.25rem 1rem 2rem;
+  }
+
+  .columnaInfo {
+    h1 {
+      font-size: 1.8rem;
+    }
+  }
+
+  .precio {
+    font-size: 2.25rem;
+  }
+
+  .requisitos {
+    div {
+      grid-template-columns: 1fr;
+      gap: 0.25rem;
+    }
+
+    strong {
+      text-align: left;
+    }
+  }
+}
